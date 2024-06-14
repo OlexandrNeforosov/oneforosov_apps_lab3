@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Car.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Car.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">ua</span><span class="s2">.</span><span class="s1">odu</span><span class="s2">.</span><span class="s1">op</span><span class="s2">.</span><span class="s1">oneforosov</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Car </span><span class="s2">{</span>
+    <span class="s1">String brand</span><span class="s2">;</span>
+    <span class="s1">String model</span><span class="s2">;</span>
+    <span class="s0">int </span><span class="s1">year</span><span class="s2">;</span>
+    <span class="s0">double </span><span class="s1">fuelConsumption</span><span class="s2">;</span>
+
+    <span class="s0">public </span><span class="s1">Car</span><span class="s2">() {}</span>
+
+    <span class="s0">public </span><span class="s1">Car</span><span class="s2">(</span><span class="s0">int </span><span class="s1">y</span><span class="s2">, </span><span class="s1">String m</span><span class="s2">, </span><span class="s1">String b</span><span class="s2">, </span><span class="s0">double </span><span class="s1">fc</span><span class="s2">) {</span>
+        <span class="s1">brand </span><span class="s2">= </span><span class="s1">b</span><span class="s2">;</span>
+        <span class="s1">model </span><span class="s2">= </span><span class="s1">m</span><span class="s2">;</span>
+        <span class="s1">year </span><span class="s2">= </span><span class="s1">y</span><span class="s2">;</span>
+        <span class="s1">fuelConsumption </span><span class="s2">= </span><span class="s1">fc</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">Car</span><span class="s2">(</span><span class="s0">int </span><span class="s1">year</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">year </span><span class="s2">= </span><span class="s1">year</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String getInfo</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s3">&quot;Our car is: &quot; </span><span class="s2">+ </span><span class="s1">brand </span><span class="s2">+ </span><span class="s3">&quot;; Model: &quot; </span><span class="s2">+ </span><span class="s1">model </span><span class="s2">+ </span><span class="s3">&quot;; Year: &quot; </span><span class="s2">+ </span><span class="s1">year</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public double </span><span class="s1">calculateConsumption</span><span class="s2">(</span><span class="s0">double </span><span class="s1">distance</span><span class="s2">, </span><span class="s0">double </span><span class="s1">fuelPrice</span><span class="s2">) {</span>
+        <span class="s0">double </span><span class="s1">fuelPer100km </span><span class="s2">= (</span><span class="s1">fuelConsumption </span><span class="s2">/ </span><span class="s4">100</span><span class="s2">) * </span><span class="s1">distance</span><span class="s2">;</span>
+        <span class="s0">return </span><span class="s1">fuelPer100km </span><span class="s2">* </span><span class="s1">fuelPrice</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s1">Car firstCar </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Car</span><span class="s2">( </span><span class="s4">1997</span><span class="s2">,  </span><span class="s3">&quot;Corolla&quot;</span><span class="s2">,  </span><span class="s3">&quot;Toyota&quot;</span><span class="s2">, </span><span class="s4">10.5</span><span class="s2">);</span>
+        <span class="s1">Car secondCar </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Car</span><span class="s2">( </span><span class="s4">2002</span><span class="s2">,  </span><span class="s3">&quot;Impreza WRX STI&quot;</span><span class="s2">,  </span><span class="s3">&quot;Subaru&quot;</span><span class="s2">, </span><span class="s4">12.1</span><span class="s2">);</span>
+        <span class="s1">Car thirdCar </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Car</span><span class="s2">( </span><span class="s4">1999</span><span class="s2">,  </span><span class="s3">&quot;Skyline GT-R&quot;</span><span class="s2">,  </span><span class="s3">&quot;Nissan&quot;</span><span class="s2">, </span><span class="s4">13.3</span><span class="s2">);</span>
+        <span class="s1">Car fourthCar </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Car</span><span class="s2">( </span><span class="s4">2004</span><span class="s2">,  </span><span class="s3">&quot;RX-8&quot;</span><span class="s2">,  </span><span class="s3">&quot;Mazda&quot;</span><span class="s2">, </span><span class="s4">10.8</span><span class="s2">);</span>
+        <span class="s1">Car fifthCar </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Car</span><span class="s2">( </span><span class="s4">2007</span><span class="s2">,  </span><span class="s3">&quot;Lancer Evolution IX&quot;</span><span class="s2">,  </span><span class="s3">&quot;Mitsubishi&quot;</span><span class="s2">, </span><span class="s4">10.6</span><span class="s2">);</span>
+        <span class="s1">Car empty </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Car</span><span class="s2">();</span>
+        <span class="s1">Car single </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Car</span><span class="s2">(</span><span class="s4">1989</span><span class="s2">);</span>
+        <span class="s0">double </span><span class="s1">fuelPrice </span><span class="s2">= </span><span class="s4">51.4</span><span class="s2">;</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s1">firstCar</span><span class="s2">.</span><span class="s1">getInfo</span><span class="s2">());</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s1">secondCar</span><span class="s2">.</span><span class="s1">getInfo</span><span class="s2">());</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s1">thirdCar</span><span class="s2">.</span><span class="s1">getInfo</span><span class="s2">());</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s1">fourthCar</span><span class="s2">.</span><span class="s1">getInfo</span><span class="s2">());</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s1">fifthCar</span><span class="s2">.</span><span class="s1">getInfo</span><span class="s2">());</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;====================&quot;</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Consumption for firstCar:&quot; </span><span class="s2">+ </span><span class="s1">firstCar</span><span class="s2">.</span><span class="s1">calculateConsumption</span><span class="s2">(</span><span class="s4">30</span><span class="s2">, </span><span class="s1">fuelPrice</span><span class="s2">));</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Consumption for secondCar:&quot; </span><span class="s2">+ </span><span class="s1">secondCar</span><span class="s2">.</span><span class="s1">calculateConsumption</span><span class="s2">(</span><span class="s4">545.25</span><span class="s2">, </span><span class="s1">fuelPrice</span><span class="s2">));</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Consumption for thirdCar:&quot; </span><span class="s2">+ </span><span class="s1">thirdCar</span><span class="s2">.</span><span class="s1">calculateConsumption</span><span class="s2">(</span><span class="s4">133</span><span class="s2">, </span><span class="s1">fuelPrice</span><span class="s2">));</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Consumption for fourthCar:&quot; </span><span class="s2">+ </span><span class="s1">fourthCar</span><span class="s2">.</span><span class="s1">calculateConsumption</span><span class="s2">(</span><span class="s4">108</span><span class="s2">, </span><span class="s1">fuelPrice</span><span class="s2">));</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Consumption for fifthCar:&quot; </span><span class="s2">+ </span><span class="s1">fifthCar</span><span class="s2">.</span><span class="s1">calculateConsumption</span><span class="s2">(</span><span class="s4">106</span><span class="s2">, </span><span class="s1">fuelPrice</span><span class="s2">));</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
